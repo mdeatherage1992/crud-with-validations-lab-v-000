@@ -5,6 +5,42 @@
 <div id= "error_explanation">
   <h2> There were some errors: </h2>
 
+  <ul>
+    <% @song.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</div>
+
+<div class ="field">
+  <%= f.label :released %><br>
+  <%= f.check_box :released %>
+</div>
+
+<div class ="field">
+  <%= f.label :release_year %><br>
+  <%= f.number_field :release_year %>
+</div>
+
+<div class ="field">
+  <%= f.label :genre %><br>
+  <%= f.text_field :released %>
+</div>
+
+<div class ="field">
+  <%= f.label :released %><br>
+  <%= f.check_box :released %>
+</div>
+
+
+
+
 
 
 <%= link_to 'Cancel Editing', @song %>
