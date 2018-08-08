@@ -13,7 +13,7 @@ def create
   if @song.save
     redirect_to @song
   else
-    render :edit
+    render :new
   end
 end
 
