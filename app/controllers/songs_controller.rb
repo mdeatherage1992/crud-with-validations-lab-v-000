@@ -14,4 +14,6 @@ end
 
 def edit
 end
+
+def destroy
 end
