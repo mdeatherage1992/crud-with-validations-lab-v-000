@@ -5,7 +5,7 @@ def index
 end
 
 def show
-  @song = Song.find_by(params[:id])
+  @song = Song.find(params[:id])
 end
 
 def create
@@ -18,6 +18,12 @@ def create
 end
 
 def update
+  @song = Song.find(params[:id])
+  if @song.update(song_params)
+    redirect_to @song
+  else
+    render :edit
+  end
 end
 
 def edit
